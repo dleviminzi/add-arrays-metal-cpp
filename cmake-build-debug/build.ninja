@@ -1,0 +1,220 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: 00
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/minzi/Dev/Metal/00/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target 00
+
+
+#############################################
+# Order-only phony target for 00
+
+build cmake_object_order_depends_target_00: phony || cmake_object_order_depends_target_METAL_CPP
+
+build CMakeFiles/00.dir/main.cpp.o: CXX_COMPILER__00_Debug /Users/minzi/Dev/Metal/00/main.cpp || cmake_object_order_depends_target_00
+  DEP_FILE = CMakeFiles/00.dir/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  INCLUDES = -I/Users/minzi/Dev/Metal/00/metal-cmake/metal-cpp -I/Users/minzi/Dev/Metal/00/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = CMakeFiles/00.dir
+  OBJECT_FILE_DIR = CMakeFiles/00.dir
+
+build CMakeFiles/00.dir/MetalAdder.cpp.o: CXX_COMPILER__00_Debug /Users/minzi/Dev/Metal/00/MetalAdder.cpp || cmake_object_order_depends_target_00
+  DEP_FILE = CMakeFiles/00.dir/MetalAdder.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  INCLUDES = -I/Users/minzi/Dev/Metal/00/metal-cmake/metal-cpp -I/Users/minzi/Dev/Metal/00/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = CMakeFiles/00.dir
+  OBJECT_FILE_DIR = CMakeFiles/00.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 00
+
+
+#############################################
+# Link the executable 00
+
+build 00: CXX_EXECUTABLE_LINKER__00_Debug CMakeFiles/00.dir/main.cpp.o CMakeFiles/00.dir/MetalAdder.cpp.o | metal-cmake/libMETAL_CPP.a || metal-cmake/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LINK_LIBRARIES = metal-cmake/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = CMakeFiles/00.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = 00
+  TARGET_PDB = 00.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/minzi/Dev/Metal/00/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/minzi/Dev/Metal/00/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/minzi/Dev/Metal/00 -B/Users/minzi/Dev/Metal/00/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/minzi/Dev/Metal/00/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target METAL_CPP
+
+
+#############################################
+# Order-only phony target for METAL_CPP
+
+build cmake_object_order_depends_target_METAL_CPP: phony || metal-cmake/CMakeFiles/METAL_CPP.dir
+
+build metal-cmake/CMakeFiles/METAL_CPP.dir/defination.cpp.o: CXX_COMPILER__METAL_CPP_Debug /Users/minzi/Dev/Metal/00/metal-cmake/defination.cpp || cmake_object_order_depends_target_METAL_CPP
+  DEP_FILE = metal-cmake/CMakeFiles/METAL_CPP.dir/defination.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  INCLUDES = -I/Users/minzi/Dev/Metal/00/metal-cmake/metal-cpp -I/Users/minzi/Dev/Metal/00/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cmake/CMakeFiles/METAL_CPP.dir
+  OBJECT_FILE_DIR = metal-cmake/CMakeFiles/METAL_CPP.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target METAL_CPP
+
+
+#############################################
+# Link the static library metal-cmake/libMETAL_CPP.a
+
+build metal-cmake/libMETAL_CPP.a: CXX_STATIC_LIBRARY_LINKER__METAL_CPP_Debug metal-cmake/CMakeFiles/METAL_CPP.dir/defination.cpp.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = metal-cmake/CMakeFiles/METAL_CPP.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cmake/libMETAL_CPP.a
+  TARGET_PDB = METAL_CPP.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build metal-cmake/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/minzi/Dev/Metal/00/cmake-build-debug/metal-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build metal-cmake/edit_cache: phony metal-cmake/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build metal-cmake/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/minzi/Dev/Metal/00/cmake-build-debug/metal-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/minzi/Dev/Metal/00 -B/Users/minzi/Dev/Metal/00/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build metal-cmake/rebuild_cache: phony metal-cmake/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build METAL_CPP: phony metal-cmake/libMETAL_CPP.a
+
+build libMETAL_CPP.a: phony metal-cmake/libMETAL_CPP.a
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/minzi/Dev/Metal/00/cmake-build-debug
+
+build all: phony 00 metal-cmake/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/minzi/Dev/Metal/00/cmake-build-debug/metal-cmake
+
+build metal-cmake/all: phony metal-cmake/libMETAL_CPP.a
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../metal-cmake/CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt ../metal-cmake/CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

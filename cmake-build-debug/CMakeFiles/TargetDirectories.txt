@@ -1,0 +1,6 @@
+/Users/minzi/Dev/Metal/00/cmake-build-debug/CMakeFiles/00.dir
+/Users/minzi/Dev/Metal/00/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/minzi/Dev/Metal/00/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/minzi/Dev/Metal/00/cmake-build-debug/metal-cmake/CMakeFiles/METAL_CPP.dir
+/Users/minzi/Dev/Metal/00/cmake-build-debug/metal-cmake/CMakeFiles/edit_cache.dir
+/Users/minzi/Dev/Metal/00/cmake-build-debug/metal-cmake/CMakeFiles/rebuild_cache.dir
