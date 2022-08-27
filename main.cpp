@@ -25,5 +25,6 @@ int main() {
 
     auto m = MetalAdder(device);
 
+    device->release();
     return 0;
 }

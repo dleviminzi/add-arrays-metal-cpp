@@ -20,7 +20,9 @@ MetalAdder::MetalAdder(MTL::Device *device) {
 
     // currently this method will return nullptr. since I'm not using xcode, I will need to compile
     // and then use newLibrary(path, etc)
-    MTL::Library* defaultLibrary = _mDevice->newDefaultLibrary();
+
+    NS::String* filePath = NS::String::string("/Users/minzi/Dev/Metal/00/metal-lib/add.metallib", NS::UTF8StringEncoding);
+    MTL::Library* defaultLibrary = _mDevice->newLibrary(filePath, &error);
     if (defaultLibrary == nil) {
         throw std::runtime_error("failed to initialize default library");
     }
