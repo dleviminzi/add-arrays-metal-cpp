@@ -18,6 +18,9 @@ class MetalAdder {
 
 public:
     MetalAdder(MTL::Device *device);
+    void PrepareData();
+    void SendComputeCommand();
+    void Verify();
 };
 
 

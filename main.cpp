@@ -24,6 +24,10 @@ int main() {
     std::cout << "Hello from " << StringFrom(name) << std::endl;
 
     auto m = MetalAdder(device);
+    m.PrepareData();
+    m.SendComputeCommand();
+    m.Verify();
+
 
     device->release();
     return 0;
