@@ -1,9 +1,9 @@
-#include <iostream>
 
+#define NS_PRIVATE_IMPLEMENTATION
 #define CA_PRIVATE_IMPLEMENTATION
-// #include <Metal/Metal.hpp>
-//#include <AppKit/AppKit.hpp>
+#define MTL_PRIVATE_IMPLEMENTATION
 #include "MetalAdder.h"
+#include <iostream>
 
 
 std::string StringFrom(NS::String *name) {
@@ -27,7 +27,6 @@ int main() {
     m.PrepareData();
     m.SendComputeCommand();
     m.Verify();
-
 
     device->release();
     return 0;
